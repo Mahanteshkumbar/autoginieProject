@@ -5,8 +5,10 @@
 1) NodeJS.exe
 
 Steps:
-**npm install**
-**bower install**
+**npm install**,
+
+**bower install**,
+
 **gulp**
 
 Run Project: 
