@@ -1,0 +1,24 @@
+{
+  "name": "simple-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mahantesh Kumbar"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Angulrjs",
+    "npm",
+    "bower",
+    "grunt"
+  ],
+  "dependencies": {
+    "angular": "1.4.5",
+    "animateCSS": "~1.2.1",
+    "jquery": "~2.1.4",
+    "br-fullpage": "~1.2.4",
+    "bootstrap": "~3.3.6"
+  },
+  "moduleType": [],
+  "homepage": "index.html"
+}
