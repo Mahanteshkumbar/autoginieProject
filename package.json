@@ -12,8 +12,9 @@
   ],
   "author": "Mantu",
   "license": "ISC",
-  "dependencies": {    
+  "dependencies": {
     "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
     "gulp-less": "^3.0.5"
   },
   "devDependencies": {

@@ -4,6 +4,8 @@ var jshint = require('gulp-jshint');
 var htmlmin = require('gulp-htmlmin');
 var concats = require('gulp-concat');
 var less = require('gulp-less');
+var clean = require('gulp-clean');
+
 
 // Basic Gulp task syntax
 gulp.task('hello', function () {
@@ -26,7 +28,7 @@ gulp.task('minify', function() {
 
 //concat the library files
 gulp.task('concat', function() {
-  return gulp.src(['./bower_components/angular/angular.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/br-fullpage/dist/br-fullpage.min.js','./bower_components/animateCSS/dist/jquery.animatecss.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/bootstrap/dist/js/bootstrap.min.js'])
+  return gulp.src(['./bower_components/angular/angular.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/br-fullpage/dist/br-fullpage.min.js','./bower_components/animateCSS/dist/jquery.animatecss.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/bootstrap/dist/js/bootstrap.min.js','./bower_components/jquery.easing/js/jquery.easing.min.js','index.js'])
     .pipe(concats('libs.js'))
     .pipe(gulp.dest('./build'));
 });
@@ -59,6 +61,11 @@ gulp.task('watch', function() {
   gulp.watch('index.html', ['minify']);
   gulp.watch('app.js', ['jshint']);
   gulp.watch('style.less', ['styles']);
+});
+
+gulp.task('clean', function () {
+	return gulp.src('./build', {read: false})
+		.pipe(clean());
 });
 
 gulp.task('default', ['watch', 'hello', 'jshint', 'minify', 'concat','concatapp','copy','styles','copyImg']);
