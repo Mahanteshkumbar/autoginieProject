@@ -28,7 +28,7 @@ gulp.task('minify', function() {
 
 //concat the library files
 gulp.task('concat', function() {
-  return gulp.src(['./bower_components/angular/angular.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/br-fullpage/dist/br-fullpage.min.js','./bower_components/animateCSS/dist/jquery.animatecss.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/bootstrap/dist/js/bootstrap.min.js','./bower_components/jquery.easing/js/jquery.easing.min.js','index.js'])
+  return gulp.src(['./bower_components/angular/angular.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/br-fullpage/dist/br-fullpage.min.js','./bower_components/animateCSS/dist/jquery.animatecss.min.js','./bower_components/jquery/dist/jquery.min.js','./bower_components/bootstrap/dist/js/bootstrap.min.js','./bower_components/jquery.easing/js/jquery.easing.min.js','index.js','./bower_components/angular-bootstrap/ui-bootstrap.min.js'])
     .pipe(concats('libs.js'))
     .pipe(gulp.dest('./build'));
 });
@@ -41,7 +41,7 @@ gulp.task('concatapp', function() {
 });
 
 gulp.task('copy', function () {
-  return gulp.src('./bower_components/**/*.min.css')
+  return gulp.src(['./bower_components/**/*.min.css','./bower_components/**/*.css'])
     .pipe(gulp.dest('./build/public/css'));
 });
 

@@ -1,4 +1,4 @@
-angular.module("MyApp",['br.fullpage'])
+angular.module("MyApp",['br.fullpage','ui.bootstrap'])
 .controller('BodyCtrl',function ($scope) {
 	// body...
 	$scope.message = "GulpJs and AngularJS Example";
